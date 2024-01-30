@@ -1,13 +1,8 @@
-import Header from "./components/Header/Header";
-import LoginForm from "./components/LoginForm/LoginForm";
+import { createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 
 function App() {
     return (
-        <>
-            <Header hideMenu={false} />
-            {/* <InputWithText /> */}
-            <LoginForm />
-        </>
+      
     );
 }
 
