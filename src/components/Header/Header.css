@@ -1,0 +1,19 @@
+.header {
+    background: bisque;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
