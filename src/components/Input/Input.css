@@ -1,0 +1,12 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 10px;
+}
+
+.container-form input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+}

@@ -1,0 +1,27 @@
+.register-container {
+    margin-inline: auto;
+    max-width: 400px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 480px;
+    border: 2px solid;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.bt-form {
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: antiquewhite;
+}
+
+.bt-form:hover {
+    background: rgb(240, 202, 152);
+}
