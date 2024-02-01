@@ -1,0 +1,18 @@
+.accordion {
+    width: 400px;
+}
+
+.accordion header {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.accordion header button {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+}

@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
-import "./LoginForm.css";
+import { useNavigate } from "react-router-dom";
 import authContext from "../../context/authContext";
+import "./LoginForm.css";
 
 function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const Context = useContext(authContext);
+    const { isAuthenticated, setIsAuthenticated } = useContext(authContext);
+    localStorage.setItem("isAuthenticated", true);
+    const navigate = useNavigate();
     const regex =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
@@ -27,6 +30,8 @@ function LoginForm() {
         event.preventDefault();
         if (isInputValid()) {
             console.log("Seu email:", email, "e sua senha, foram capturados!");
+            setIsAuthenticated(true);
+            navigate("/");
         } else {
             console.log("Campos inválidos");
         }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 import PropTypes from "prop-types";
 
@@ -8,13 +9,16 @@ function Header(props) {
             {hideMenu ? null : (
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <Link to="/login">Login</Link>
                     </li>
                     <li>
-                        <a href="/register">Register</a>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/register">Register</Link>
                     </li>
                 </ul>
             )}
