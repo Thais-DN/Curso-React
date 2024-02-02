@@ -5,8 +5,13 @@
     padding: 10px;
 }
 
+.container-form label {
+    color: rgb(95, 67, 32);
+}
+
 .container-form input {
     padding: 10px;
+    border: 1px solid rgb(95, 67, 32);
     border-radius: 10px;
     width: 400px;
 }

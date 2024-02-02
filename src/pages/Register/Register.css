@@ -1,6 +1,7 @@
 .register-container {
     margin-inline: auto;
-    max-width: 400px;
+    max-width: 505px;
+    background: rgb(254, 244, 231);
 }
 
 .register-form {
@@ -8,20 +9,26 @@
     flex-direction: column;
     margin-top: 40px;
     width: 480px;
-    border: 2px solid;
+    border: 2px solid rgb(95, 67, 32);
     border-radius: 10px;
     align-items: center;
     padding: 10px;
 }
 
+.input::placeholder {
+    color: rgba(164, 115, 55, 0.773);
+}
+
 .bt-form {
     margin: 10px;
     padding: 10px 40px;
+    border: 2px solid rgb(95, 67, 32);
     border-radius: 10px;
     cursor: pointer;
-    background: antiquewhite;
+    background: rgb(255, 224, 193);
+    color: rgb(95, 67, 32);
 }
 
 .bt-form:hover {
-    background: rgb(240, 202, 152);
+    background: rgb(247, 210, 164);
 }
