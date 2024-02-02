@@ -13,6 +13,7 @@ import Login from "./pages/Login/Login";
 import AuthProvider from "./providers/AuthProvider/AuthProvider";
 import Posts from "./pages/Posts/Posts";
 import Products from "./pages/Products/Products";
+import CreateProduct from "./pages/CreateProduct/CreateProduct";
 
 const browserRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -20,10 +21,14 @@ const browserRouter = createBrowserRouter(
             <Route path="/" element={<Layout />} errorElement={<NotFound />}>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="register" element={<Register />} />
-                <Route path="products" element={<Products />} />
                 <Route path="posts/:postId" element={<Posts />} />
             </Route>
+            <Route path="/products">
+                <Route index element={<Products />} />
+                <Route path="create" element={<CreateProduct />} />
+                <Route path=":productId" element={null} />
+            </Route>
+            <Route path="register" element={<Register />} />
             <Route path="login" element={<Login />} />
         </Route>
     )

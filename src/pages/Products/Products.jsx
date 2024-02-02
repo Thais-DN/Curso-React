@@ -1,4 +1,4 @@
-import axios from "axios";
+import { useEffect, useState } from "react";
 import httpClient from "../../axios";
 
 export default function Products() {
@@ -12,7 +12,9 @@ export default function Products() {
 
     return (
         <div>
-            <h1>olá</h1>
+            {products.map(function (product) {
+                return <span key={product.id}>{product.name}</span>;
+            })}
         </div>
     );
 }

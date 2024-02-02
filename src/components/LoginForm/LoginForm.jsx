@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authContext from "../../context/authContext";
 import "./LoginForm.css";
+import httpClient from "../../axios";
 
 function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { isAuthenticated, setIsAuthenticated } = useContext(authContext);
+    const context = isAuthenticated;
     localStorage.setItem("isAuthenticated", true);
     const navigate = useNavigate();
     const regex =
@@ -26,10 +28,14 @@ function LoginForm() {
         return true;
     }
 
-    function onSubmitHandler(event) {
+    async function onSubmitHandler(event) {
         event.preventDefault();
         if (isInputValid()) {
-            console.log("Seu email:", email, "e sua senha, foram capturados!");
+            const response = await httpClient.post("/auth/login", {
+                email,
+                password,
+            });
+            localStorage.setItem("token", response.data.token);
             setIsAuthenticated(true);
             navigate("/");
         } else {
