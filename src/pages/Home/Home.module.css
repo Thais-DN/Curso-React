@@ -1,3 +1,19 @@
-.h1 {
-    color: bisque;
+.container {
+    margin-top: 50px;
+    margin-inline: auto;
+    max-width: 70%;
+    border: 2px solid rgb(95, 67, 32);
+    border-radius: 20px;
+    background: rgb(254, 244, 231);
+}
+
+.authMessage {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(95, 67, 32);
+}
+
+.buttonContainer {
+    /* Estilos para o contêiner do botão */
 }

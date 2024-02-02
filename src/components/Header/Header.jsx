@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import "./Header.css";
+import styles from "./Header.module.css";
 import PropTypes from "prop-types";
 
 function Header(props) {
     const hideMenu = props.hideMenu;
     return (
-        <header className="header">
+        <header className={styles.header}>
             {hideMenu ? null : (
                 <ul>
                     <li>
@@ -22,7 +22,6 @@ function Header(props) {
                     </li>
                 </ul>
             )}
-            {props.name}
         </header>
     );
 }
