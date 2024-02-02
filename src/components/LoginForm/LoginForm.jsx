@@ -14,6 +14,10 @@ function LoginForm() {
     const regex =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
+    const handleRegistrar = () => {
+        navigate("/register");
+    };
+
     function onEmailChangeHandler(event) {
         setEmail(event.target.value);
     }
@@ -45,13 +49,14 @@ function LoginForm() {
 
     return (
         <form className="container" onSubmit={onSubmitHandler}>
+            <span className="boasVindas">Faça login aqui!</span>
             <div className="input-container">
                 <label htmlFor="email">Email</label>
                 <input
                     className="input"
                     type="text"
                     id="email"
-                    placeholder="Email"
+                    placeholder="seu.email@gmail.com"
                     onChange={onEmailChangeHandler}
                 />
             </div>
@@ -60,11 +65,18 @@ function LoginForm() {
                 <input
                     className="input"
                     type="password"
-                    placeholder="Senha"
+                    placeholder="Senha1234"
                     onChange={onPasswordChangeHandler}
                 />
             </div>
-            <button type="submit">Login</button>
+            <div>
+                <button type="submit">Login</button>
+                <button onClick={handleRegistrar}>Registrar-se</button>
+            </div>
+            <span className="aviso">
+                Caso ainda não tenha se registrado, poderá fazer isso ao abertar
+                o botão "Registrar-se" e completar o formulario.
+            </span>
         </form>
     );
 }

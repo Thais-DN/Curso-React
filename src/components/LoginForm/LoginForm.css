@@ -3,9 +3,15 @@
     margin-inline: auto;
     text-align: center;
     width: 300px;
-    border: 2px solid;
+    border: 1px solid rgb(95, 67, 32);
     border-radius: 10px;
     padding: 30px;
+    background: rgb(254, 244, 231);
+}
+
+.boasVindas {
+    font-size: xx-large;
+    color: rgb(95, 67, 32);
 }
 
 .input-container {
@@ -15,20 +21,34 @@
     padding: 10px;
     gap: 5px;
 }
+.input-container label {
+    color: rgb(95, 67, 32);
+}
 
 .input {
+    border: 1px solid rgb(95, 67, 32);
     border-radius: 10px;
     padding: 10px;
 }
 
+.input::placeholder {
+    color: rgba(164, 115, 55, 0.773);
+}
+
 .container button {
-    margin-top: 10px;
+    margin: 10px;
     padding: 10px 20px;
-    background: rgb(247, 225, 198);
+    background: rgb(255, 224, 193);
+    border: 1px solid rgb(95, 67, 32);
     border-radius: 10px;
     cursor: pointer;
+    color: rgb(95, 67, 32);
 }
 
 .container button:hover {
-    background: rgb(249, 216, 176);
+    background: rgb(247, 210, 164);
+}
+
+.aviso {
+    font-size: 13px;
 }
